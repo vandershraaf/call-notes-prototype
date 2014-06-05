@@ -17,6 +17,7 @@
     <script src="./js/app.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="./js/bootstrap-datepicker.js"></script>
 	<!-- #5C203E -->
 	<!--
 	<script>
@@ -67,6 +68,66 @@
  
 		</div>
 		<div class="col-md-8">
+
+    <form class="form-horizontal">
+      <fieldset>
+      <legend>Call Note History</legend>
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Date: </label>
+          <div class="col-md-6">
+                  <input data-provide="datepicker" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail" class="col-lg-2 control-label">Or filter by </label>
+          <div class="col-md-3">
+              <select class="form-control" id="select" ng-change="ticketReqChange()">
+                  <option>-- None --</option>
+                  <option>Merchant's Name</option>
+                   <option>Merchant's Email</option>
+                  <option>Product</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+              <input type="text" class="form-control">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-2">
+          <button type="submit" class="btn btn-primary">View Notes</button>
+          </div>
+      </div>
+
+      </fieldset>
+    </form>
+
+        <!-- Date picker START -->
+        <!--
+         <div class="col-sm-4">
+            <h2>By Day</h2>
+            <hr/>
+            <div class="date-picker"  data-date="2014/09/02" data-keyboard="true">
+                <div class="date-container pull-left">
+                    <h4 class="weekday">Monday</h4>
+                    <h2 class="date">Februray 4th</h2>
+                    <h4 class="year pull-right">2014</h4>
+                </div>
+                <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left"></span>
+                <span data-toggle="datepicker" data-type="add" class="fa fa-angle-right"></span>
+                <div class="input-group input-datepicker">
+                    <input type="text" class="form-control" data-format="YYYY/MM/DD" placeholder="YYYY/MM/DD">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                </div>
+                <span data-toggle="calendar" class="fa fa-calendar"></span>
+            </div>
+        </div>
+        -->
+          <!-- Date picker END -->
     			<table class="table table-striped table-hover ">
               <thead>
                 <tr>
@@ -75,12 +136,38 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td><td>Column content</td><td>Column content</td><td>Column content</td><td></td>
+                  <td>1</td><td>06 June 2014 11:20 PST</td><td>Ali Abu</td><td>I don't know what IPN is</td><td><a href="#" data-toggle="modal" data-target="#myModal">Click to open note</a></td>
+                </tr>
+                <tr>
+                  <td>2</td><td>06 June 2014 11:30 PST</td><td>Dwayne Johnson</td><td>Silent Post stuff</td><td><a href="#" data-toggle="modal" data-target="#myModal">Click to open note</a></td>
+                </tr>
+                <tr>
+                  <td>3</td><td>06 June 2014 11:60 PST</td><td>John Green</td><td>Cannot get payment for books</td><td><a href="#" data-toggle="modal" data-target="#myModal">Click to open note</a></td>
+
                 </tr>
                 
               </tbody>
     </table> 
 		 
+     <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
 		</div>
 		<div class="col-md-2">
 		
