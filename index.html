@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
  
-    <title>KL MTS Call Notes</title>
+    <title>KL MTS Call Transfer</title>
  
     <!-- Bootstrap core CSS -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
@@ -50,12 +50,11 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="#">KL MTS Call Notes</a>
+    <a class="navbar-brand" href="#">KL MTS Call Transfer</a>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav">
 	  <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Call Notes</a></li>
       <li><a href="#">Report</a></li>
     </ul>
   </div>
@@ -63,137 +62,32 @@
 	  <div class="row">
 		<div class="col-md-2">
 			<h3>Hello, John Doe!</h3>
-				<button class="btn btn-info">View Latest Note</button>
  
 		</div>
-		<div class="col-md-8">
+		<div class="col-md-6">
 			
 		 <form class="form-horizontal">
 		  <fieldset>
-			<legend>New Call Note</legend>
+			<legend>New Call Transfer</legend>
 			
 			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Merchant Name</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Merchant Name">
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Merchant Email</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Merchant Email">
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="select" class="col-lg-2 control-label">Product</label>
-			  <div class="col-lg-10">
-				<select class="form-control" id="select">
-				  <option>PayPal</option>
-				  <option>Payflow</option>
-				  <option>PayPal and Payflow</option>
-				</select>
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">PayPal ID</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="PayPal ID">
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Payflow Login</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Payflow Login">
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">CS/BS Agent Username</label>
+			  <label for="inputEmail" class="col-lg-2 control-label">Agent Username</label>
 			  <div class="col-lg-10">
 				<input type="text" class="form-control" id="inputEmail" placeholder="Agent Username">
 			  </div>
 			</div>
 			
 			<div class="form-group">
-			  <label for="select" class="col-lg-2 control-label">Blind Transfer?</label>
+			  <label for="inputEmail" class="col-lg-2 control-label">Merchant Account #</label>
 			  <div class="col-lg-10">
-				<select class="form-control" id="select">
-				  <option>No</option>
-				  <option>Yes</option>
-				</select>
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Issue Summary</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Issue Summary">
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="textArea" class="col-lg-2 control-label">Issue Description</label>
-			  <div class="col-lg-10">
-				<textarea class="form-control" rows="5" id="textArea"></textarea>
-				<span class="help-block">No need for complete sentences in here</span>
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Issue Resolution</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Issue Resolution">
-			  </div>
-			</div>
-			
-			<!--
-			<div class="form-group">
-			  <label for="select" class="col-lg-2 control-label">Ticket Required?</label>
-			  <div class="col-lg-10">
-				<select class="form-control" id="select" ng-model="ticketReqChange">
-				  <option>No</option>
-				  <option>Yes</option>
-				</select>
-			  </div>
-			</div>
-			-->
-			
-			<div class="form-group">
-			  <label for="select" class="col-lg-2 control-label">Ticket Required?</label>
-			  <div class="col-lg-10">
-				<select class="form-control" id="select" ng-change="ticketReqChange()">
-				  <option>No</option>
-				  <option>Yes</option>
-				</select>
-			  </div>
-			</div>
-			
-			<div class="form-group" {{displayCreated}}>
-			  <label for="select" class="col-lg-2 control-label">Ticket Created?</label>
-			  <div class="col-lg-10">
-				<select class="form-control" id="select">
-				  <option>No</option>
-				  <option>Yes</option>
-				</select>
-			  </div>
-			</div>
-			
-			<div class="form-group">
-			  <label for="inputEmail" class="col-lg-2 control-label">Ticket #</label>
-			  <div class="col-lg-10">
-				<input type="text" class="form-control" id="inputEmail" placeholder="Ticket #">
+				<input type="text" class="form-control" id="inputEmail" placeholder="Merchant Account #">
 			  </div>
 			</div>
 			
 			
 			<div class="form-group">
 			  <div class="col-lg-10 col-lg-offset-2">
-				<button class="btn btn-default">Cancel</button>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary">Add</button>
 			  </div>
 			</div>
 			
@@ -205,6 +99,26 @@
 		
 		</div>
 		
+	  </div>
+
+	  <div class="row">
+
+	  	<div class="col-md-4 col-md-offset-2">
+			
+		 <form class="form-horizontal">
+		  <fieldset>
+			<legend>Today's Call Transfer (July 23,2014)</legend>
+			<table class="table">
+				<tr><th>#</th><th>Agent Username</th><th>Merchant Account #</th></tr>
+				<tr><td>1</td><td>pavolio</td><td>123456</td></tr>
+				<tr><td>2</td><td>tduermyer</td><td>4545666</td></tr>
+				<tr><td>3</td><td>cat</td><td>42424422</td></tr>
+
+			</table>
+		  </fieldset>
+		 </form>
+		</div>
+
 	  </div>
 	  
      
