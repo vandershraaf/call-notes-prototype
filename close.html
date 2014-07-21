@@ -17,6 +17,36 @@
 	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="./js/angular.min.js"></script>
     <script src="./js/app.js"></script>
+    <!-- TODO: Maybe can read GET url from here-->
+     <script type="text/javascript">
+        /*
+        top.window.opener.location ='http://localhost/calltransfer/home.html';
+        function getSearchParameters() {
+          var prmstr = window.location.search.substr(1);
+          return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+        }
+
+        function transformToAssocArray( prmstr ) {
+            var params = {};
+            var prmarr = prmstr.split("&");
+            for ( var i = 0; i < prmarr.length; i++) {
+                var tmparr = prmarr[i].split("=");
+                params[tmparr[0]] = tmparr[1];
+            }
+            return params;
+        }
+
+        var params = getSearchParameters();
+        alert(params.code);
+        alert(params.redirect_uri);
+        window.close();
+        */
+        /*
+        if (window != top) {
+          top.location.replace(document.location);
+        }
+        */
+  </script>
 	
 	<!-- #5C203E -->
 	<!--
@@ -43,54 +73,7 @@
  
    
  
- <div class="container" ng-app="calltransfer" ng-controller="mainController" ng-init="init()">
-	<div class="navbar navbar-default">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">KL MTS Call Transfer</a>
-  </div>
-  <div class="navbar-collapse collapse navbar-responsive-collapse">
-    <ul class="nav navbar-nav">
-	  <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Report</a></li>
-    </ul>
-  </div>
-</div>
-	  <div class="row">
-		<div class="col-md-2">
-			<h3>Hi guest! Login to proceed</h3>
- 			<span id="myContainer"></span>
-			<script src="https://www.paypalobjects.com/js/external/api.js"></script>
-			<script>
-			paypal.use( ["login"], function(login) {
-			  login.render ({
-			    "appid": "AU5WuRDbReT28BsRzkZSwiXUzJ3Li83Xbuw0rwMXjoIBQit4dtGNxbRQARkr",
-			    "authend": "sandbox",
-			    "scopes": "profile email address phone https://uri.paypal.com/services/paypalattributes",
-			    "containerid": "myContainer",
-			    "locale": "en-us",
-			    "returnurl": "http://localhost/calltransfer/return.php"
-			  });
-			});
-			</script>
-		</div>
-		<div class="col-md-6">
-			
-		</div>
-		<div class="col-md-2">
-		
-		</div>
-		
-	  </div>
-
-     
  
-    </div><!-- /.container -->
-
 
    
  
